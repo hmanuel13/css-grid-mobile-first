@@ -19,6 +19,8 @@
   h1, h2, h3 {
     margin: 0;
     padding: 1em 0;
+    color: aquamarine;
+    font-family: cursive;
   }
 
   p{
@@ -33,20 +35,16 @@
     text-decoration: none;
     padding: 1em 2em;
     border: 1px solid azure;
-    margin: .5em 0;
+    margin: 10px;
   }
 
   .btn:hover{
     background: darkred;
-    color: azure;
+    color: mistyrose;
+    font-weight: bolder;
   }
 
   /* Header Showcase */
-
-  #showcase h1{
-    font-family: 'Times New Roman', Times, serif;
-  }
-
   #showcase {
     min-height: 300px;
     color: black;
@@ -66,14 +64,129 @@
   #showcase h1{
     padding-top: 55px;
     padding-bottom: 10px;
-    color: navy;
+    color: black;
   }
 
   #showcase p{
     font-weight: 600;
-    display: inline-block;
     background: mistyrose;
-    padding: 1px;
-    margin: 0 3em;
-    /* opacity: 0.2; */
+    opacity: 0.8;
   }
+
+  #showcase .content-wrap,
+  #section-a .content-wrap,
+  #section-b,
+  #section-c,
+  #section-d
+  {
+    padding: 0 1.5em;
+  }
+
+  /* Section A */
+
+  #section-a{
+    background: black;
+    color: azure;
+    bottom: 1em;
+  }
+
+  /* Section B */
+
+  #section-b{
+    padding: 1em;
+  }
+
+  #section-b ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #section-b li{
+    margin-bottom: 1em;
+    background: black;
+    color: azure;
+  }
+
+  .card-content {
+    padding: 1 em;
+  }
+
+  /* Section C */
+
+  #section-c {
+    color: black;
+    background: black url("img/gridBlock2.jpg");
+    background-size: auto;
+    z-index: -1;
+    opacity: 0.9;
+  }
+   #section-c h2{
+     color: darkcyan;
+   }
+
+   #section-c p {
+    font-weight: 600;
+    background: azure;
+    opacity: 0.8;
+   }
+
+   /* Section D */
+  
+   #section-d .box:nth-child(even) {
+     background: mistyrose;
+     color: black;
+   }
+
+   #section-d .box:nth-child(even) h2 {
+     color: darkred;
+   }
+
+   /* Footer */
+
+   #main-footer {
+     padding: 2em;
+     text-align: center;
+   }
+
+   #main-footer a{
+    color: aqua;
+    text-decoration: none;
+   }
+
+   @media(min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text{
+      columns: 2;
+      column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+
+    .box, #main-footer div {
+      grid-column: span 2;
+    }
+
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #section-b li {
+      width: 31%;
+    }
+    
+
+
+   }
